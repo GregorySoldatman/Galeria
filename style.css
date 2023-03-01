@@ -1,32 +1,55 @@
 * {
     font-family: Verdana;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 button {
     background-color: rgb(0, 106, 74);
     color: white;
     padding: 12px;
+    margin: 8px;
     font-weight: bold;
     border: none;
 }
 
 img {
     display: block;
-    margin: 0px 4px 4px 0px;
-    max-width: 100%;
-    aspect-ratio: 16 / 9
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
 }
 
-.wrapper {
+.galery {
     display: flex;
     flex-flow: row wrap;
+    margin: -4px;
+    width: calc(100% + 8px);
 }
 
 .przyciski {
     display: flex;
     justify-content: center;
+}
+
+.column {
+    /* background-color: blue;
+    box-shadow: 0 0 0 1px white; */
+    width: 25%;
+    padding: 4px;
+}
+
+.imageWrapper {
+    aspect-ratio: 16 / 9;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 50%;
+    }
 }
